@@ -1,0 +1,139 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.dark-theme {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+}
+
+/* Navigation */
+nav {
+  background-color: #1e1e1e;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #00adb5;
+  font-weight: bold;
+  font-size: large;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav ul li a {
+  color: #e0e0e0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #00adb5;
+}
+
+/* Heading */
+.section-heading {
+  text-align: center;
+  font-size: 2.5rem;
+  margin: 2rem 0 1rem;
+  color: #ffffff;
+}
+
+/* Projects Section */
+.projects-section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Project Section Styling */
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.project-card {
+  display: block;
+  background-color: #1e1e1e;
+  color: #ffffff;
+  border-radius: 12px;
+  text-align: center;
+  text-decoration: none;
+  padding: 1rem;
+  width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 0 transparent;
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.project-card h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+}
+
+.project-card p {
+  margin-top: 0.5rem;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.15);
+  background-color: #2a2a2a;
+}
+
+/* Footer */
+footer {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+}
+
+footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+footer .social-links li a {
+  color: #cccccc;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-links li a:hover {
+  color: #00adb5;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #888888;
+}
