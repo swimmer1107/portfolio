@@ -1,0 +1,207 @@
+/* certificates.css */
+
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.dark-theme {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #0f0f0f;
+  color: #f0f0f0;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-bar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-bar ul {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-bar ul li a {
+  color: #f0f0f0;
+  text-decoration: none;
+  font-weight: 500;
+  position: relative;
+}
+
+.nav-bar ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #00ffcc;
+  bottom: -4px;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-bar ul li a:hover::after,
+.nav-bar ul li a.active::after {
+  width: 100%;
+}
+
+/* Certificates Section */
+.certificates-section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.certificates-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #2ad4cc;
+}
+
+/* Certificate Grid */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.cert-grid img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background-color: #1f1f1f;
+  padding: 10px;
+}
+
+.cert-grid img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #00ffcc66;
+}
+
+/* Footer */
+footer {
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+}
+
+footer .social-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 1rem;
+}
+
+footer .social-links a {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-links a:hover {
+  color: #00ffcc;
+}
+
+footer p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Responsive Tweaks */
+@media (max-width: 600px) {
+  .nav-bar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .certificates-section h1 {
+    font-size: 2rem;
+  }
+
+  .cert-grid {
+    gap: 1rem;
+  }
+
+  footer .social-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Modal Styling */
+.modal {
+  display: flex;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.modal-content {
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #ffffff60;
+  animation: zoomIn 0.4s ease;
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+#modalCaption {
+  color: #fff;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.close-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Utility */
+.hidden {
+  display: none;
+}
