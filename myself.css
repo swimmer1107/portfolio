@@ -1,0 +1,664 @@
+html {
+  scroll-behavior: smooth;
+}
+/* Body and general styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #111;
+  padding: 15px 30px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #00bcd4;
+}
+
+/* Header styles */
+header {
+  padding: 100px 30px 60px;
+}
+
+/* Text section at the top */
+.text-content {
+  text-align: left;
+  max-width: 700px;
+  padding-left: 30px;
+  margin-bottom: 100px; /* Adds spacing between Book a Call and About section */
+}
+
+.text-content h1 {
+  font-size: 36px;
+  margin: 10px 0;
+  color: #00bcd4;
+}
+
+.text-content h3 {
+  font-size: 24px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.text-content h4 {
+  font-size: 18px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Button Style (Unified) */
+.hire-btn {
+  display: inline-block;
+  margin: 10px;
+  padding: 12px 24px;
+  background-color: #00bcd4;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.hire-btn:hover {
+  background-color: #008fa1;
+  color: aliceblue;
+}
+
+/* About Me Box Styling */
+.about-box {
+  background-color: #111;
+  padding: 30px 100px;
+  margin: 30px auto; /* Center the box horizontally */
+  border-radius: 12px;
+  color: white;
+  max-width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.582);
+  text-align: center;
+}
+
+.about-box h2 {
+  margin-top: 0;
+  font-weight: bold;
+}
+
+.about-box p {
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Centered Button Group */
+.btn-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Footer styles */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background-color: #111;
+  font-size: 14px;
+  color: #bbb;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+/* Section buttons below About Me */
+.section-buttons {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.fancy-btn {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 2px solid #00bcd4;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fancy-btn:hover {
+  background-color: #00bcd4;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00bcd4;
+}
+
+
+.info-section h2 {
+  color: #00bcd4;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.info-section p {
+  font-size: 16px;
+  color: #ccc;
+}
+
+/* Hide section by default */
+.hidden {
+  display: none;
+}
+
+/* Skills section */
+.skills-logos {
+  text-align: center;
+  padding: 40px 20px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Skill logos: original shape, glow effect on hover */
+.skills-logos img {
+  width: 70px;
+  height: 70px;
+  margin: 15px;
+  border-radius: 0; /* Removed roundness */
+  background-color: transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+/* Glow effect on hover */
+.skills-logos img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px 5px rgba(0, 188, 212, 0.7); /* Cyan glow */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.certificates-logos {
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.certificates-logos img {
+  width: 90px;
+  height: 90px;
+  margin: 15px;
+  border-radius: 0;
+  background-color: transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.certificates-logos img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 15px 5px rgba(0, 188, 212, 0.7);
+}
+.hidden {
+  display: none;
+}
+
+.section-buttons {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.fancy-btn {
+  display: inline-block;
+  margin: 10px 15px;
+  padding: 14px 28px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background: transparent;
+  border: 2px solid #00bcd4;
+  border-radius: 30px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.fancy-btn:hover {
+  background-color: #00bcd4;
+  color: black;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00bcd4;
+}
+
+/* Skills logos */
+.skills-logos img {
+  width: 80px;
+  height: 80px;
+  margin: 10px;
+  transition: transform 0.3s;
+}
+
+.skills-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Certificate and Project sections */
+.certificates-logos img,
+.projects-section img {
+  width: 200px;
+  margin: 15px;
+}
+
+.project-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px;
+  padding: 20px;
+}
+
+.project-card {
+  background-color: #111; 
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(37, 37, 37, 0.6); /* Darker shadow */
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 280px;
+  flex: 1 1 260px;
+  color: #fff;
+  overflow: hidden;
+}
+
+.project-card img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  border-radius: 8px;
+}
+
+/* Image in/out effect */
+.project-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Optional: card lift on hover */
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(38, 169, 173, 0.514);
+}
+
+
+
+
+.cta-text {
+  text-align: center;   
+  margin-top: 30px;     
+}
+
+.highlight-text {
+  color: #00ffff; 
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  
+}
+
+.white-text {
+  color: #ffffff;
+  font-size: 20px;
+}
+
+footer {
+  background-color: #111;
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+footer .social-links {
+  list-style: none;
+  padding: 0px;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+footer .social-links li a {
+  color: #00ffff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+footer .social-links li a:hover {
+  color: #fff;
+}
+
+/* Section Fade-In Animation */
+.hidden {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Social Icon Hover Animation */
+footer .social-links li a {
+  color: #3acaca;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+footer .social-links li a:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.name-animate {
+  animation: slideInFade 1.2s ease-out forwards;
+}
+
+@keyframes slideInFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-entry {
+  animation: slideInFade 1s ease-out forwards;
+}
+
+.hidden-left {
+  opacity: 0;
+  transform: translateX(-100px);
+  transition: all 0.8s ease-out;
+}
+
+.show-left {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Modal backdrop */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 15, 15, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Modal box */
+.modal-content {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  padding: 2.5rem 2rem;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 450px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  position: relative;
+  animation: fadeSlideDown 0.4s ease;
+}
+
+/* Title */
+.modal-content h2 {
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-size: 1.8rem;
+  color: #00fff7;
+}
+
+/* Inputs */
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #444;
+  border-radius: 12px;
+  background: #2b2b2b;
+  color: #fff;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+  box-sizing: border-box;
+}
+
+.modal-content input:focus,
+.modal-content textarea:focus {
+  border-color: #00fff7;
+  outline: none;
+}
+
+/* Close button */
+.close-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1.2rem;
+  font-size: 1.5rem;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #fff;
+}
+
+/* Submit button */
+.modal-content .fancy-btn {
+  width: 100%;
+  padding: 0.9rem;
+  font-size: 1rem;
+  border-radius: 10px;
+  margin-top: 0.5rem;
+}
+
+/* Animation */
+@keyframes fadeSlideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-submit-btn {
+  background-color: #131414;
+  color: whitesmoke;
+  padding: 0.9rem;
+  font-size: 1rem;
+  font-weight: bold;
+  border: solid 1px whitesmoke;
+  border-radius: 10px;
+  width: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s ease;
+}
+
+.modal-submit-btn:hover {
+  background-color: #00d9ced2;
+  transform: scale(1.02);
+}
+
+#loader {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.spinner {
+  border: 4px solid #fff;
+  border-top: 4px solid #3498db;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.modal-content {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  color: #fff;
+  background-color: #25d366;
+  padding: 12px 15px;
+  border-radius: 50%;
+  font-size: 24px;
+  z-index: 100;
+}
+.header-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 2rem;
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.text-content {
+  flex: 1 1 60%;
+  min-width: 300px;
+}
+
+.image-box {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.profile-img {
+  width: 280px;
+  height: 280px;
+  object-fit: cover;
+  object-position: top; /* shows more of your hair/head */
+  border-radius: 50%;
+  border: 2px solid rgba(0, 255, 255, 0.4);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.profile-img:hover {
+  box-shadow: 0 0 30px rgba(0, 255, 255, 0.6);
+}
+
+
+
+/* Responsive fallback */
+@media (max-width: 768px) {
+  .header-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .image-box {
+    justify-content: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
